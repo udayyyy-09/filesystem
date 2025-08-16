@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Landing = () => {
   const [expanded, setExpanded] = React.useState(false);
@@ -22,10 +23,10 @@ const Landing = () => {
               </h1>
               <p className="mt-4 text-lg font-normal text-gray-400 sm:mt-8">
                 This project is a full-stack application that allows users to:
-                Upload meeting transcripts. Provide a custom
-                instruction (e.g., "Summarize in bullet points for executives").
-                Generate AI-powered summaries using OpenAI’s free models. Edit
-                the summary before finalizing. Share the summary via email.
+                Upload meeting transcripts. Provide a custom instruction (e.g.,
+                &quot;Summarize in bullet points for executives&quot;). Generate
+                AI-powered summaries using OpenAI’s free models. Edit the
+                summary before finalizing. Share the summary via email.
               </p>
 
               <form
@@ -79,17 +80,20 @@ const Landing = () => {
               </div>
 
               <div className="absolute inset-0">
-                <img
+                <Image
                   className="object-cover w-full h-full opacity-50"
                   src="https://landingfoliocom.imgix.net/store/collection/dusk/images/noise.png"
-                  alt=""
+                  alt="Background noise texture"
+                  fill
                 />
               </div>
 
-              <img
+              <Image
                 className="relative w-full max-w-md mx-auto"
                 src="https://landingfoliocom.imgix.net/store/collection/dusk/images/hero/2/illustration.png"
-                alt=""
+                alt="Illustration"
+                width={500}
+                height={500}
               />
             </div>
           </div>
