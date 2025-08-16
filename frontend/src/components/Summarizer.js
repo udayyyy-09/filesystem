@@ -27,13 +27,13 @@ export default function Summarizer() {
     try {
       setLoading(true);
       setMessage("");
-      const response = await axios.post("http://localhost:5000/api/summary", {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/summary`, {
         transcript,
         prompt,
       });
       setSummary(response.data.summary);
     } catch (error) {
-      setMessage("❌ Error generating summary. Please try again.");
+      setMessage("Error generating summary. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -42,13 +42,13 @@ export default function Summarizer() {
   // Share summary via email
   const handleShare = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/api/share", {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/share`, {
         emails,
         summary,
       });
       setMessage(response.data.message);
     } catch (error) {
-      setMessage("❌ Error sending email. Please check the recipient addresses.");
+      setMessage("Error sending email. Please check the recipient addresses.");
     }
   };
 
