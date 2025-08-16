@@ -79,21 +79,14 @@ const Landing = () => {
                 </svg>
               </div>
 
-              <div className="absolute inset-0">
-                <Image
-                  className="object-cover w-full h-full opacity-50"
-                  src="https://landingfoliocom.imgix.net/store/collection/dusk/images/noise.png"
-                  alt="Background noise texture"
-                  fill
-                />
-              </div>
+             
 
-              <Image
+              <img
                 className="relative w-full max-w-md mx-auto"
-                src="https://landingfoliocom.imgix.net/store/collection/dusk/images/hero/2/illustration.png"
+                src="/photo.jpg"
                 alt="Illustration"
-                width={500}
-                height={500}
+                width={700}
+                height={700}
               />
             </div>
           </div>
